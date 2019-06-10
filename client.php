@@ -22,6 +22,7 @@ var new_password_user;
 var t;
 var select_id_case = 1;
 var select_id_skin = 0;
+	///////////////////////////////////////////////
 function sleep(milliseconds) {    //переделать на джаву
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
@@ -30,6 +31,7 @@ function sleep(milliseconds) {    //переделать на джаву
         }
     }
 }
+	//////////////////////////////////////////
 function close_banner_1(){
 	jQuery('.banner div').remove();
 }
@@ -126,14 +128,7 @@ function select_case(){
 						return res;
 					});
 					console.log(result);
-                }else{
-                    alert(result.message);
-                }
-				return false;
-            }
-    });
-	sleep(500);
-	jQuery.ajax({
+			jQuery.ajax({
             url: "for_db.php",
             type: "POST",
             data: {mode:1,parametr:select_id_case}, // Передаем данные для записи
@@ -161,6 +156,14 @@ function select_case(){
 				return false;
             }
     });
+                }else{
+                    alert(result.message);
+                }
+				return false;
+            }
+    });
+	//sleep(500);
+	
 	
 	
 }

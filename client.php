@@ -22,7 +22,7 @@ var new_password_user;
 var t;
 var select_id_case = 1;
 var select_id_skin = 0;
-function sleep(milliseconds) {
+function sleep(milliseconds) {    //переделать на джаву
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
         if ((new Date().getTime() - start) > milliseconds){
